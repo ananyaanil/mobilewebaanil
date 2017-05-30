@@ -22,15 +22,12 @@
 					<?php
 					include 'config.php';
 					include 'opendb.php';
-
 					$conf_num = (isset($_POST['conf_num'])    ? $_POST['conf_num']   : '');
-
 					$sql= "SELECT customers.customerid, customers.fname, customers.lname, customers.state, orders.conf_num, orders.salesrep
 						FROM customers
 						JOIN orders on customers.customerid = orders.customerid
 						WHERE conf_num LIKE '$conf_num' LIMIT 100";
 					$result = mysqli_query($conn, $sql);
-
 					if (mysqli_num_rows($result) > 0) {
 					    // output data of each row
 					    while($row = mysqli_fetch_assoc($result)) {
@@ -44,9 +41,7 @@
 					} else {
 					    echo "0 results";
 					}
-
 					mysqli_close($conn);
-
 					?>
 
 				<div data-role="footer" data-theme="b">
