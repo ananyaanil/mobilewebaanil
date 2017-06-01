@@ -24,7 +24,7 @@
 					include 'opendb.php';
 
 					$sql= "SELECT id, fname, lname
-					FROM lecture1";
+					FROM customers";
 					$result = mysqli_query($conn, $sql);
 
 					if (mysqli_num_rows($result) > 0) {
