@@ -26,7 +26,7 @@
 					$fname = (isset($_POST['fname'])    ? $_POST['fname']   : '');
 					$lname = (isset($_POST['lname'])    ? $_POST['lname']   : '');
 
-					$sql= "SELECT id, fname, lname
+					$sql= "SELECT customerid, fname, lname
 					FROM customers
 					WHERE fname LIKE '$fname' AND lname LIKE '$lname' LIMIT 1";
 					$result = mysqli_query($conn, $sql);
