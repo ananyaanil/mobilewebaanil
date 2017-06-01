@@ -34,7 +34,7 @@
 					if (mysqli_num_rows($result) > 0) {
 					    // output data of each row
 					    while($row = mysqli_fetch_assoc($result)) {
-									echo "ID: " . $row["id"]. "<br>";
+									echo "ID: " . $row["customerid"]. "<br>";
 					        echo "First Name: " . $row["fname"]. "<br>";
 					        echo "Last Name: " . $row["lname"]. "<br><hr>";
 					    }
